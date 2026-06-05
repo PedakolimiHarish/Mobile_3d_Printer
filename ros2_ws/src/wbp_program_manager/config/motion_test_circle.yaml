@@ -1,0 +1,99 @@
+motion_segments:
+  - segment_id: 1
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.30, 0.0, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 2
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.21, 0.21, 0.2, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 3
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.0, 0.30, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 4
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [-0.21, 0.21, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 5
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [-0.30, 0.0, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 6
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [-0.21, -0.21, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 7
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.0, -0.30, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 8
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.21, -0.21, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01
+
+  - segment_id: 9
+    joint_names:
+      - base_to_mast_joint
+      - carriage_to_tool_joint
+      - mast_to_carriage_joint
+      - tool_mount_joint
+    target_positions: [0.3, 0.0, 0.0, 0.0]
+    max_velocity: 1
+    max_acceleration: 0.1
+    position_tolerance: 0.01

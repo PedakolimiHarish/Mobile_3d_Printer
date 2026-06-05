@@ -1,0 +1,5 @@
+uint32 queue_depth
+uint32 queue_capacity
+uint32 planner_lookahead
+uint8 planner_state
+uint8 exec_state

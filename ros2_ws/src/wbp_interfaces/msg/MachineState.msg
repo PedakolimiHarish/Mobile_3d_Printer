@@ -1,0 +1,13 @@
+uint8 system_state
+uint8 safety_state
+uint32 job_id
+uint32 layer
+uint32 segment
+bool paused
+bool     job_loaded
+uint64   loaded_job_id
+uint32   loaded_job_schema_version
+string   loaded_job_hash
+string   last_job_rejection
+uint32 last_command_seq
+uint8  last_command_outcome

@@ -1,0 +1,5 @@
+# Request
+---
+# Response
+bool accepted
+string reason

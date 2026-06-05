@@ -1,0 +1,20 @@
+# Opaque serialized job payload.
+# Firmware is the only interpreter of this blob.
+uint8[] job_blob
+
+# Audit-only metadata identifying the source of the job.
+# Examples: "ui", "cli", "pipeline", "test"
+string source
+---
+# True only if the job was fully validated and accepted into firmware custody.
+bool accepted
+
+# Stable rejection reason when accepted == false.
+# Empty string when accepted == true.
+string rejection_reason
+
+# Optional: assigned job_id (0 if not accepted)
+uint64 job_id
+
+# Optional: job content hash (empty if not accepted)
+string job_hash

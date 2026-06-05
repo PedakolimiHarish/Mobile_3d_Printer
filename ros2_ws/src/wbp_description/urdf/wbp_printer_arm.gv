@@ -1,0 +1,35 @@
+digraph G {
+node [shape=box];
+"base_footprint" [label="base_footprint"];
+"base_link" [label="base_link"];
+"mast_link" [label="mast_link"];
+"carriage_link" [label="carriage_link"];
+"tool_link" [label="tool_link"];
+"toolhead_link" [label="toolhead_link"];
+"tool0" [label="tool0"];
+"wheel_fl" [label="wheel_fl"];
+"wheel_fr" [label="wheel_fr"];
+"wheel_rl" [label="wheel_rl"];
+"wheel_rr" [label="wheel_rr"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_footprint" -> "base_footprint_joint" [label="xyz: 0 0 0.125 \nrpy: 0 -0 0"]
+"base_footprint_joint" -> "base_link"
+"base_link" -> "base_to_mast_joint" [label="xyz: 0 0 0.2 \nrpy: 0 -0 0"]
+"base_to_mast_joint" -> "mast_link"
+"mast_link" -> "mast_to_carriage_joint" [label="xyz: 0 0 0.1 \nrpy: 0 -0 0"]
+"mast_to_carriage_joint" -> "carriage_link"
+"carriage_link" -> "carriage_to_tool_joint" [label="xyz: 0.6 0 -0.08 \nrpy: 0 -0 0"]
+"carriage_to_tool_joint" -> "tool_link"
+"tool_link" -> "tool_mount_joint" [label="xyz: 0 0 -0.105 \nrpy: 0 -0 0"]
+"tool_mount_joint" -> "toolhead_link"
+"toolhead_link" -> "tool0_joint" [label="xyz: 0 0 -0.1 \nrpy: 0 -0 0"]
+"tool0_joint" -> "tool0"
+"base_link" -> "wheel_fl_joint" [label="xyz: 0.45 0.35 -0.1 \nrpy: 0 -0 0"]
+"wheel_fl_joint" -> "wheel_fl"
+"base_link" -> "wheel_fr_joint" [label="xyz: 0.45 -0.35 -0.1 \nrpy: 0 -0 0"]
+"wheel_fr_joint" -> "wheel_fr"
+"base_link" -> "wheel_rl_joint" [label="xyz: -0.45 0.35 -0.1 \nrpy: 0 -0 0"]
+"wheel_rl_joint" -> "wheel_rl"
+"base_link" -> "wheel_rr_joint" [label="xyz: -0.45 -0.35 -0.1 \nrpy: 0 -0 0"]
+"wheel_rr_joint" -> "wheel_rr"
+}

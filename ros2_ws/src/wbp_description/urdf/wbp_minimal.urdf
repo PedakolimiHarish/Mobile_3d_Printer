@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!-- start of file: ros2_ws/src/wbp_description/urdf/wbp_minimal.urdf -->
+<robot name="wbp_visual">
+
+  <!-- Base -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.0 0.8 0.2" />
+      </geometry>
+      <material name="gray">
+        <color rgba="0.6 0.6 0.6 1.0" />
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="100.0" />
+      <inertia
+        ixx="10.0" ixy="0.0" ixz="0.0"
+        iyy="10.0" iyz="0.0"
+        izz="10.0" />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="1.0 0.8 0.2" />
+      </geometry>
+    </collision>
+  </link>
+
+  <!-- Mast -->
+  <link name="mast_link">
+    <visual>
+      <origin xyz="0 0 0.75" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="1.5" />
+      </geometry>
+      <material name="blue">
+        <color rgba="0.2 0.2 0.8 1.0" />
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="20.0" />
+      <inertia
+        ixx="1.0" ixy="0.0" ixz="0.0"
+        iyy="1.0" iyz="0.0"
+        izz="1.0" />
+    </inertial>
+
+    <collision>
+      <origin xyz="0 0 0.75" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.05" length="1.5" />
+      </geometry>
+    </collision>
+
+  </link>
+
+  <!-- Toolhead -->
+  <link name="toolhead_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.08" />
+      </geometry>
+      <material name="red">
+        <color rgba="0.8 0.2 0.2 1.0" />
+      </material>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="5.0" />
+      <inertia
+        ixx="0.1" ixy="0.0" ixz="0.0"
+        iyy="0.1" iyz="0.0"
+        izz="0.1" />
+    </inertial>
+
+    <collision>
+      <geometry>
+        <sphere radius="0.08" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="z_prismatic_joint" type="prismatic">
+
+    <parent link="base_link" />
+    <child link="mast_link" />
+    <origin xyz="0 0 0.2" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit
+      lower="0.0"
+      upper="3.0"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+
+  <joint name="mast_to_toolhead" type="fixed">
+    <parent link="mast_link" />
+    <child link="toolhead_link" />
+    <origin xyz="0 0 1.58" rpy="0 0 0" />
+  </joint>
+
+</robot>
+
+<!-- end of file: ros2_ws/src/wbp_description/urdf/wbp_minimal.urdf -->
