@@ -1,0 +1,16 @@
+
+; --- START ---
+G21         ; units = mm
+G90         ; absolute positioning
+M82         ; absolute extrusion
+
+G1 X0.10 Y0.10 Z0.10 E5.0 f200
+G1 X0.20 Y0.20 Z0.20 E5.0 f200
+G1 X0.30 Y0.30 Z0.30 E10.0 f200
+G1 X0.40 Y0.40 Z0.40 E10.0 F120
+G1 X0.50 Y0.50 Z0.50 E10.0 F120
+G1 X0.60 Y0.60 Z0.60 E10.0 f200
+G1 X0.50 Y0.50 Z0.50 E10.0 f200
+G1 X0.30 Y0.30 Z0.30 E10.0 f200
+G1 X0.10 Y0.10 Z0.10 E10.0 f200
+G1 X0.00 Y0.00 Z0.00 E10.0 f200

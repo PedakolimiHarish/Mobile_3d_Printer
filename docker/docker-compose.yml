@@ -1,0 +1,29 @@
+services:
+  mobile_3d_printer:
+    image: ros2-jazzy:latest
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: mobile-3d-printer
+
+    command: sleep infinity
+
+    network_mode: host
+    ipc: host
+
+    volumes:
+      - ..:/home/ubuntu/mobile_3d_printer/
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - /mnt/wslg:/mnt/wslg
+
+    working_dir: /home/ubuntu/mobile_3d_printer/
+
+    environment:
+      - DISPLAY=${DISPLAY}
+      - WAYLAND_DISPLAY=${WAYLAND_DISPLAY}
+      - XDG_RUNTIME_DIR=${XDG_RUNTIME_DIR}
+      - PULSE_SERVER=${PULSE_SERVER}
+      - QT_X11_NO_MITSHM=1
+      - LIBGL_ALWAYS_SOFTWARE=0
